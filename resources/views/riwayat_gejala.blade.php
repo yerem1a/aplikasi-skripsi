@@ -5,7 +5,7 @@
 
     <ul>
         @foreach($riwayat_gejala as $item)
-            <li>{{ $item->gejala }} - {{ $item->created_at }}</li>
+            <li>{{ $item->gejala }} - {{ $item->created_at }} - {{ $item->penyakit }}</li>
         @endforeach
     </ul>
 @endsection

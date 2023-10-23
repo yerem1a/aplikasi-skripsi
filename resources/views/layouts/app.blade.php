@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Klasifikasi Penyakit</title>
-</head>
-<body>
-    <header>
-        <!-- Tambahkan elemen header di sini -->
-        <h1>Aplikasi Klasifikasi Penyakit</h1>
-    </header>
+@include('layouts.head')
+@include('layouts.header')
+@include('layouts.sidebar')
+    <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard</h1>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-    <main>
-        @yield('content') <!-- Ini adalah area konten dinamis -->
-    </main>
-
-    <footer>
-        <!-- Tambahkan elemen footer di sini -->
-        <p>&copy; 2023 Aplikasi Klasifikasi Penyakit</p>
-    </footer>
-</body>
-</html>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+       @yield('content')
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  {{-- @include('js') --}}
+@include('layouts.js')

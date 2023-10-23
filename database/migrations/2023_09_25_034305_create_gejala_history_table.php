@@ -17,6 +17,7 @@ class CreateGejalaHistoryTable extends Migration
             $table->id();
             $table->string('gejala');
             $table->timestamps();
+            $table->string('penyakit');
         });
     }
 

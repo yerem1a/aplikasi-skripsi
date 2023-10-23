@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Http;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [KlasifikasiController::class, 'index'])->name('klasifikasi.index');
 Route::get('/klasifikasi', [KlasifikasiController::class, 'index'])->name('klasifikasi.index');
 Route::post('/klasifikasi', [KlasifikasiController::class, 'klasifikasi'])->name('klasifikasi.klasifikasi');
 Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->name('klasifikasi.riwayat');
@@ -24,4 +25,4 @@ Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->
 
 //     return response()->json($response->json());
 // });
-Route::get('/riwayat-gejala', 'KlasifikasiController@riwayatGejala')->name('klasifikasi.riwayat');
+Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->name('klasifikasi.riwayat');
