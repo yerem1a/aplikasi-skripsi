@@ -25,4 +25,4 @@ Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->
 
 //     return response()->json($response->json());
 // });
-Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->name('klasifikasi.riwayat');
+// Route::get('/riwayat-gejala', [KlasifikasiController::class, 'riwayatGejala'])->name('klasifikasi.riwayat');
