@@ -16,7 +16,6 @@ class KlasifikasiController extends Controller
     public function klasifikasi(Request $request)
     {
 
-        // dd($request);
         // Validasi request
         $data = $request->validate([
             'gejala' => 'required|array',
@@ -35,13 +34,16 @@ class KlasifikasiController extends Controller
         ]);
 
         $hasil_klasifikasi = $response->json()['hasil_klasifikasi'];
+        $persentase = $response->json()['persentase'];
+
         // Simpan gejala ke dalam tabel gejala_histories
         $gejalaHistory = new GejalaHistory();
-        
         $gejalaHistory->gejala = $gejalaText;
         $gejalaHistory->penyakit = $hasil_klasifikasi;
+        $gejalaHistory->persentase = $persentase;
         $gejalaHistory->save();
-        return view('hasil_klasifikasi', compact('hasil_klasifikasi'));
+        return view('hasil_klasifikasi', compact('hasil_klasifikasi', 'persentase'));
+
     }
 
     public function riwayatGejala()
