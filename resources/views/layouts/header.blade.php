@@ -14,7 +14,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('klasifikasi.index') }}" class="nav-link">Klasifikasi</a>
+            <a href="{{ route('klasifikasi.index') }}" class="nav-link">Deteksi Dini</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('klasifikasi.riwayat') }}" class="nav-link">History</a>
